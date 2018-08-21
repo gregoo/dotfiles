@@ -1,0 +1,40 @@
+# General stuff
+startup_message off
+nethack on
+deflogin on
+altscreen on
+msgwait 1
+maptimeout 0
+defc1 off
+defnonblock 5
+defutf8 on
+utf8 on on
+vbell off
+activity "%C -> %n%f %t activity!"
+bell_msg "%C -> %n%f %t bell!~"
+
+# Terminal
+term xterm-256color
+attrcolor b ".I"
+
+# Bigger scrollback
+defscrollback 20000
+
+# Dangerous keybindings
+bind ^k
+bind L
+bind ^\
+bind K kill
+bind I login on
+bind O login off
+bind } history
+
+# Arrow control
+bindkey "^[[1;5D" prev
+bindkey "^[[1;5C" next
+bindkey "^[[1;5B" focus prev
+bindkey "^[[1;5A" focus next
+
+# Powerline w/ Escape & Copy support
+caption always "%{kY}%?%P%{kB} Copy %{BY}%?%{kY} %n%f* %t %?%E%{YR}%{kR} Escape %{Rg}%:%{Yg}%?"
+hardstatus alwayslastline "%{gk} %S %{kg} $LOGNAME %{gk} %H %?%{kg}%{kY} %-Lw%{Yk}%:%{Yg}%{Yk}%?%{Yk} %n%f* %t %{kY}%+Lw %-="

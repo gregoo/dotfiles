@@ -1,0 +1,43 @@
+# Fully documented hardstatus examples
+
+hardstatus string '%{=b}%{G}%H: %{C}%w %=%{G}%D, %m/%d %C%a'
+# %{=b} : keep the current attribute set (=) and set text to bold (b)
+# %{G}  : set text to bright (capital) green (g)
+# %H    : hostname of the system
+# %{C}  : set text to bright (capital) cyan (c)
+# %w    : all the window numbers and names
+# %=    : pad the string to the display's width (to get the following text right-aligned)
+# %{G}  : ^
+# %D    : weekday name
+# %m    : month number
+# %d    : day number
+# %C    : 12h format date
+# %a    : AM/PM
+
+hardstatus string '%{=b}%{G}%H: %{-b C}%?%-Lw%?%?%E%{+b Rk}%:%{+b Ck}%?%n*%f %t%{-b dC}%?%+Lw%?'
+# %{=b}     : keep the current attribute set (=) and set text to bold (b)
+# %{G}      : set text to bright (capital) green (g)
+# %H        : hostname of the system
+# %{-b C}   : remove (-) bold (b) from the current attribute set and set bright (capital) cyan (c) text
+# %?        : if #1
+# %-Lw      : all the windows (w) before the current one (-), with flags (L)
+# %?        : endif #1
+# %?        : if #2
+# %E        : set %? to true if the window is being escaped
+# %{+b Rk}  : add (+) bold (b) to the current attribute set and set bright (capital) red (r) background with black (k) text
+# %:        : else #2
+# %{+b Ck}   : add (+) bold (b) to the current attribute set and set bright (capital) cyan (c) background with black (k) text
+# %?        : endif #2
+# %n        : window number
+# %f        : window flags
+# %t        : window title
+# %{-b dC}% : remove (-) bold (b) from the current attribute set and set default (d) background with bright (capital) cyan (c) text
+# %?        : if #3
+# %+Lw      : all the windows (w) after the current one (+), with flags (L)
+# %?        : endif #3
+# %=        : pad the string to the display's width (to get the following text right-aligned)
+# %{G}      : ^
+# %d        : day number
+# %m        : month number
+# %c        : 24h format date
+
