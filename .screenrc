@@ -36,5 +36,5 @@ bindkey "^[[1;5B" focus prev
 bindkey "^[[1;5A" focus next
 
 # Powerline w/ Escape & Copy support
-caption always "%{kg} $LOGNAME %{gk} %H %?%P%{Bk}%{kB} Copy %{BY}%:%{kY}%?%{kY} %n%f %t %?%E%{YR}%{kR} Escape %{Rg}%:%{Yg}%?"
-hardstatus alwayslastline "%{gk} %S %?%{kg}%{kY} %-Lw%{Yk}%:%{Yg}%{Yk}%?%{Yk} %n%f* %t %{kY}%+Lw %-="
+caption always "%{= kW}%{mk} $LOGNAME %{gm}%{gk} %H %?%P%{Bg}%{Bk} Copy %{YB}%:%{Yg}%?%{Yk} %n%f %t %?%E%{RY}%{Rk} Escape %{KR}%:%{KY}%?"
+hardstatus alwayslastline "%{= kW}%{gk} %S %?%{kg}%{kY} %-Lw%{Yk}%:%{Yg}%?%{Yk} %n%f* %t %{kY}%+Lw %-="
